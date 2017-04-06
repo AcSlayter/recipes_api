@@ -5,4 +5,7 @@ package main.config;
  */
 public class ValueNotAvailableException extends Exception {
 
+    public ValueNotAvailableException(String key, Exception e) {
+        super("Failed to find Key : value=".concat(key), e);
+    }
 }

@@ -16,7 +16,7 @@ public class MyConfig {
         Object keyValue = config.get(key);
 
         if (keyValue == null) {
-            throw new ValueNotAvailableException();
+            throw new ValueNotAvailableException(key, new Exception());
         }
         return (Boolean) keyValue;
     }
